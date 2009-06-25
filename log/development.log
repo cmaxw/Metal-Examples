@@ -1,0 +1,601 @@
+/!\ FAILSAFE /!\  Thu Jun 18 13:47:01 -0600 2009
+  Status: 500 Internal Server Error
+  uninitialized constant Authentication::User
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:105:in `const_missing'
+    /Users/chuck/Ruby/Metal-Examples/app/metal/authentication.rb:7:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:44:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `each'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/utils.rb:176:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:149:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/bin/passenger-spawn-server:50
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090618194841)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090618194841')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-18 13:50:46) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  passenger (2.1.2) lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+  passenger (2.1.2) lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/utils.rb:176:in `safe_fork'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:149:in `start'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-18 14:27:15) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-18 14:28:00) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-18 14:29:21) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 14:40:13) [GET]
+Rendering site/login
+Completed in 49ms (View: 47, DB: 0) | 200 OK [http://metal.local/login]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 14:40:19) [GET]
+Rendering site/login
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://metal.local/login]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 14:43:57) [GET]
+Rendering site/login
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://metal.local/login]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 14:44:08) [GET]
+Rendering site/login
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://metal.local/login]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 14:44:26) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://metal.local/login?target_path=/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: near " ": syntax error: SELECT * FROM users WHERE id = [0m
+/!\ FAILSAFE /!\  Thu Jun 18 15:07:24 -0600 2009
+  Status: 500 Internal Server Error
+  SQLite3::SQLException: near " ": syntax error: SELECT * FROM users WHERE id = 
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:212:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/sqlite_adapter.rb:157:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/sqlite_adapter.rb:402:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/sqlite_adapter.rb:157:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/sqlite_adapter.rb:305:in `select'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:62:in `select_all'
+    /Users/chuck/Ruby/Metal-Examples/app/metal/authentication.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:44:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `each'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT * FROM users WHERE id = 0[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT * FROM users WHERE id = 0[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 15:08:48) [GET]
+  Parameters: {"target_path"=>"/admin?asasasasasasasasasas=asasasasasasasas"}
+Rendering site/login
+Completed in 67ms (View: 66, DB: 0) | 200 OK [http://localhost/login?target_path=/admin?asasasasasasasasasas=asasasasasasasas]
+  [4;36;1mUser Create (0.8ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "username", "password", "created_at") VALUES('2009-06-18 21:23:47', 'chuck', 'password', '2009-06-18 21:23:47')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT * FROM users WHERE id = 0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-18 15:25:01) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  passenger (2.1.2) lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+  passenger (2.1.2) lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/utils.rb:176:in `safe_fork'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:149:in `start'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-18 15:26:06) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  passenger (2.1.2) lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+  passenger (2.1.2) lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/utils.rb:176:in `safe_fork'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:149:in `start'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-18 15:26:12) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  passenger (2.1.2) lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+  passenger (2.1.2) lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/utils.rb:176:in `safe_fork'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:149:in `start'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 15:26:25) [GET]
+Rendering admin/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://metal.local/admin]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT * FROM users WHERE id = 0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 15:27:17) [GET]
+Rendering admin/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://metal.local/admin]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 15:30:47) [GET]
+Rendering admin/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://metal.local/admin]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 15:31:02) [GET]
+Rendering admin/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/admin]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 15:32:03) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 15:34:40) [GET]
+Rendering admin/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/admin]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 15:34:43) [GET]
+Rendering admin/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 15:35:12) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 15:35:19) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:29:41) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://metal.local/login?target_path=/admin]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:29:48) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://metal.local/login?target_path=/admin]
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:30:19) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:30:22) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:30:57) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:32:26) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 51ms (View: 7, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:34:03) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 50ms (View: 8, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:35:20) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 52ms (View: 7, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:36:07) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 51ms (View: 8, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-18 17:37:01) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 51ms (View: 8, DB: 0) | 200 OK [http://localhost/login?target_path=/admin]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT * FROM users WHERE username='chuck' AND password='password'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT * FROM users WHERE id = 1[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2009-06-18 17:38:02) [GET]
+Rendering admin/index
+Completed in 68ms (View: 66, DB: 1) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090618194841)
+Migrating to CreateAffiliateRedirects (20090625032138)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "affiliate_redirects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "path" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090625032138')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("affiliate_redirects")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mAffiliateRedirect Create (0.5ms)[0m   [0;1mINSERT INTO "affiliate_redirects" ("updated_at", "path", "location", "created_at") VALUES('2009-06-25 03:39:20', '/aff', 'http://www.google.com', '2009-06-25 03:39:20')[0m
+  [4;36;1mAffiliateRedirect Load (0.7ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m
+  [4;36;1mAffiliateRedirect Load (0.7ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m
+  [4;35;1mAffiliateRedirect Load (0.4ms)[0m   [0mSELECT * FROM affiliate_redirects WHERE path = '/login'[0m
+/!\ FAILSAFE /!\  Wed Jun 24 22:25:03 -0600 2009
+  Status: 500 Internal Server Error
+  You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]
+    /Users/chuck/Ruby/Metal-Examples/app/metal/affiliate_redirects.rb:6:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:44:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `each'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/utils.rb:176:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:149:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/bin/passenger-spawn-server:50
+  [4;36;1mAffiliateRedirect Load (0.6ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/login'[0m
+/!\ FAILSAFE /!\  Wed Jun 24 22:25:25 -0600 2009
+  Status: 500 Internal Server Error
+  You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]
+    /Users/chuck/Ruby/Metal-Examples/app/metal/affiliate_redirects.rb:6:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:44:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `each'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/metal.rb:43:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/utils.rb:176:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:149:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.1.2/bin/passenger-spawn-server:50
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/login'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-24 22:26:51) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 70ms (View: 68, DB: 0) | 200 OK [http://metal.local/login?target_path=/admin]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT * FROM affiliate_redirects WHERE path = '/login'[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2009-06-24 22:27:33) [GET]
+  Parameters: {"target_path"=>"/admin"}
+Rendering site/login
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://metal.local/login?target_path=/admin]
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-24 22:27:38) [GET]
+
+ActionController::RoutingError (No route matches "/aff" with {:method=>:get}):
+  passenger (2.1.2) lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+  passenger (2.1.2) lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/utils.rb:176:in `safe_fork'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:149:in `start'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m
+{"updated_at"=>"2009-06-25 03:39:20", "id"=>"1", "path"=>"/aff", "location"=>"http://www.google.com", "created_at"=>"2009-06-25 03:39:20"}
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-24 22:30:09) [GET]
+
+ActionController::RoutingError (No route matches "/aff" with {:method=>:get}):
+  passenger (2.1.2) lib/phusion_passenger/rack/request_handler.rb:65:in `process_request'
+  passenger (2.1.2) lib/phusion_passenger/abstract_request_handler.rb:197:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/utils.rb:176:in `safe_fork'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:149:in `start'
+  passenger (2.1.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:260:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:121:in `lookup_or_add'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:254:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:75:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server_collection.rb:74:in `synchronize'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rails_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:148:in `spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/spawn_manager.rb:285:in `handle_spawn_application'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `__send__'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:332:in `main_loop'
+  passenger (2.1.2) lib/phusion_passenger/abstract_server.rb:182:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m
+{"updated_at"=>"2009-06-25 03:39:20", "id"=>"1", "path"=>"/aff", "location"=>"http://www.google.com", "created_at"=>"2009-06-25 03:39:20"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m

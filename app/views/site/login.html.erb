@@ -1,0 +1,7 @@
+<h1>Please Login</h1>
+<% form_for :user, :url => "/authenticate", :method => "post" do |form| %>
+<p>Username: <%= form.text_field :username %></p>
+<p>Password: <%= form.password_field :password %></p>
+<%= hidden_field_tag :target_path, @target_path %>
+<%= submit_tag "Login" %>
+<% end %>
