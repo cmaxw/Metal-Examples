@@ -599,3 +599,30 @@ Rendering rescues/layout (not_found)
   [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m
 {"updated_at"=>"2009-06-25 03:39:20", "id"=>"1", "path"=>"/aff", "location"=>"http://www.google.com", "created_at"=>"2009-06-25 03:39:20"}
   [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT * FROM affiliate_redirects WHERE path = '/aff'[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM users where id = 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM users where id = 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM users where id = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090618194841)
+Migrating to CreateAffiliateRedirects (20090625032138)
+Migrating to CreateApiKeys (20090701170732)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "api_keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090701170732')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("affiliate_redirects")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("api_keys")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mApiKey Create (0.8ms)[0m   [0;1mINSERT INTO "api_keys" ("updated_at", "user_id", "key", "created_at") VALUES('2009-07-01 17:10:12', NULL, 'abcdefghijklmnopqrstuvwxyz', '2009-07-01 17:10:12')[0m

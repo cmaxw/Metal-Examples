@@ -9,11 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090625032138) do
+ActiveRecord::Schema.define(:version => 20090701170732) do
 
   create_table "affiliate_redirects", :force => true do |t|
     t.string   "path"
     t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "api_keys", :force => true do |t|
+    t.string   "key"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
